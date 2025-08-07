@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ماركت أولاد محيي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>ماركت أولاد محيي</h1>
+      <p>أولاد محيي....الاختيار الذكي</p>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search market ..." onkeyup="searchProducts()">
+    </div>
+
+    <div class="products">
+      <div class="product" onclick="showDetails('أرز مصري',' EGP 30', ['الوزن الصافي : 1 كجم', 'شركة الانتاج : الضحى'], ['تاريخ الانتاج :.....', 'تاريخ الانتهاء : ......'])">
+        <img src="<a href="https://ibb.co/m5bdYm1K"><img src="https://i.ibb.co/m5bdYm1K/OIP.webp" alt="OIP" border="0"></a> القطع المتبقية : 10
+        <p class="product-name">أرز مصري</p>
+        <p class="price">30 EGP</p>
+      </div>
+
+      <div class="product" onclick="showDetails('مكرونة اسباجيتي', '11 EGP', ['الوزن الصافي : 350 جم', 'شركة الانتاج : الملكة'], ['تاريخ الانتاج : ......', 'تاريخ الانتهاء : ........'])">
+        <img src="<a href="https://ibb.co/3y0FPnm8"><img src="https://i.ibb.co/3y0FPnm8/480-Wx480-H-131615-main.jpg" alt="480-Wx480-H-131615-main" border="0"></a>العدد المتبقي : 6
+        <p class="product-name">مكرونة اسباجيتي</p>
+        <p class="price">11 EGP</p>
+      </div>
+
+      <div class="product" onclick="showDetails('لبن بخيره صحي', '25 EGP', ['الوزن الصافي : 500 مل', 'شركة الانتاج : جهينة بخيره'], ['تاريخ الانتاج : ......', 'تاريخ الانتهاء : ......'])">
+        <img src="<a href="https://ibb.co/Jjv1TkKh"><img src="https://i.ibb.co/Jjv1TkKh/40556-main.jpg" alt="40556-main" border="0"></a>العدد المتبقي 21
+        <p class="product-name">لبن بخيره صحي</p>
+        <p class="price">25 EGP</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة منبثقة لعرض التفاصيل -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+      <p><strong>التفاصيل:</strong></p>
+      <ul id="modalPros"></ul>
+      <p><strong>تاريخ الصنع:</strong></p>
+      <ul id="modalCons"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
